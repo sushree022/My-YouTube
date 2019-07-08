@@ -1,0 +1,5 @@
+<input #myvalue type="text">
+<button (click)= "log(myvalue.value)"> Search </button>
+<div *ngFor="let video of videos" (click)="log(myvalue.value)">
+    <h2> {{video.snippet.description}}</h2>
+</div>
