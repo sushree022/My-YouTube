@@ -1,0 +1,15 @@
+<h3>Trending Videos</h3>
+<div *ngFor="let video of tvideos">
+<mat-card class="trend-card">
+    <mat-card-header></mat-card-header>
+    <mat-card-content>
+        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">
+            <img mat-card-image [src]="video.snippet.thumbnails.medium.url" alt="..."></a>
+            <mat-card-actions>
+                <h5>
+                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}</a>
+                </h5>
+            </mat-card-actions>
+    </mat-card-content>
+</mat-card>
+</div>

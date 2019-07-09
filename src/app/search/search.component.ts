@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { YoutubeService } from '../youtube.service';
 
 @Component({
@@ -8,7 +8,6 @@ import { YoutubeService } from '../youtube.service';
 })
 export class SearchComponent implements OnInit {
   public videos: any;
-
   constructor(private service: YoutubeService) {
     this.videos = [];
   }
@@ -16,11 +15,12 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
   log(value) {
-this.service.getdatafrom(value);
-this.service.getVideosForChanel(20)
-.subscribe(list => {
-console.log(list);
-this.videos = list.items;
-});
+    this.service.getdatafrom(value)
+    this.service.getVideosForChanel(20)
+    .subscribe(list => {
+    console.log(list);
+    this.videos = list.items;
+    });
+  }
 }
-}
+

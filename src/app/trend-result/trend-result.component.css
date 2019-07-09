@@ -1,0 +1,14 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.trend-card
+{
+    margin-top: 10px;
+    width: 275px;
+    float: left;
+    padding: 20px;
+    background-color: lightcyan;
+}
+
+mat-card-actions
+{
+    height: 50px;
+}
